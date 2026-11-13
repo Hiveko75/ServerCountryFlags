@@ -177,7 +177,9 @@ public class Config {
         }
 
         // So that the map button appears/disappears without having to reopen the screen
-        Screen screen = Minecraft.getInstance().gui.screen();
+        // The config is first loaded in the client entrypoint, before Minecraft creates gui
+        var gui = Minecraft.getInstance().gui;
+        Screen screen = gui == null ? null : gui.screen();
         if (screen instanceof JoinMultiplayerScreen) {
             screen.resize(screen.width, screen.height);
         }

@@ -177,9 +177,9 @@ public class Config {
         }
 
         // So that the map button appears/disappears without having to reopen the screen
-        Screen screen = Minecraft.getInstance().screen;
+        Screen screen = Minecraft.getInstance().gui.screen();
         if (screen instanceof JoinMultiplayerScreen) {
-            screen.resize(Minecraft.getInstance(), screen.width, screen.height);
+            screen.resize(screen.width, screen.height);
         }
     }
 

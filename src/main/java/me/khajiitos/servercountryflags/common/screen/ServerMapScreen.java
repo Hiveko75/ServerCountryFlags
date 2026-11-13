@@ -173,7 +173,7 @@ public class ServerMapScreen extends Screen {
 
         this.addRenderableWidget(new Button.Builder(
                 Component.translatable("gui.back"),
-                (button) -> Minecraft.getInstance().setScreen(this.parent)
+                (button) -> Minecraft.getInstance().gui.setScreen(this.parent)
         ).bounds(this.width / 2 + 5, this.height - 26, 100, 20).build());
     }
 
@@ -224,7 +224,7 @@ public class ServerMapScreen extends Screen {
     }
 
     public void onClose() {
-        Minecraft.getInstance().setScreen(this.parent);
+        Minecraft.getInstance().gui.setScreen(this.parent);
     }
 
     private static boolean doesServerListHaveServer(String serverIp) {

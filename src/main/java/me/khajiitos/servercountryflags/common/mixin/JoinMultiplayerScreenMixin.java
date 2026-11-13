@@ -78,7 +78,7 @@ public class JoinMultiplayerScreenMixin extends Screen {
 
         if (Config.cfg.mapButton) {
             // Setting x and y to 0, they will be set instantly in repositionElements
-            servercountryflags$serverMapButton = new ImageButton(0, 0, 20, 20, Minecraft.getInstance().options.highContrast().get() ? MAP_BUTTON_SPRITES_HIGH_CONTRAST : MAP_BUTTON_SPRITES, (button) -> Minecraft.getInstance().setScreen(new ServerMapScreen(this)));
+            servercountryflags$serverMapButton = new ImageButton(0, 0, 20, 20, Minecraft.getInstance().options.highContrast().get() ? MAP_BUTTON_SPRITES_HIGH_CONTRAST : MAP_BUTTON_SPRITES, (button) -> Minecraft.getInstance().gui.setScreen(new ServerMapScreen(this)));
             this.addRenderableWidget(servercountryflags$serverMapButton);
         }
     }

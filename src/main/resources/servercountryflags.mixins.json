@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.khajiitos.servercountryflags.common.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "JoinMultiplayerScreenMixin",
+    "LanguageManagerMixin",
+    "OnlineServerEntryMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "servercountryflags.refmap.json"
+}

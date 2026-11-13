@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "servercountryflags",
+  "version": "${version}",
+  "name": "Server Country Flags",
+  "description": "Shows the flag of where a server is located. Unofficial 26.2/26.3 port by Hiveko of Khajiitos' mod.",
+  "authors": [
+    "Khajiitos"
+  ],
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "client",
+  "contact": {
+    "homepage": "https://github.com/Khajiitos/ServerCountryFlags",
+    "sources": "https://github.com/Khajiitos/ServerCountryFlags",
+    "issues": "https://github.com/Khajiitos/ServerCountryFlags/issues"
+  },
+  "entrypoints": {
+    "client": [
+      "me.khajiitos.servercountryflags.fabric.ServerCountryFlagsFabric"
+    ],
+    "modmenu": [
+      "me.khajiitos.servercountryflags.fabric.ModMenuApiImpl"
+    ]
+  },
+  "mixins": [
+    "servercountryflags.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version_range}",
+    "java": ">=25"
+  }
+}

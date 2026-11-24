@@ -1,10 +1,9 @@
-# Builds the Fabric jar of this port branch on every push (or manually from the Actions tab).
+# Builds the Fabric jar of this port branch when started by hand from the Actions tab.
 # A release is only published from a manual run with "publish" ticked.
 name: Build port (Fabric)
 
+# Started by hand only (Actions -> Run workflow): no builds on push or pull requests.
 on:
-  push:
-    branches: [port-26.2, port-26.3]
   workflow_dispatch:
     inputs:
       publish:
